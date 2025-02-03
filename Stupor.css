@@ -1,0 +1,533 @@
+:root {
+    --primary-color: #00ff88;
+    --secondary-color: #03dac6;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --glow: 0 0 20px var(--primary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('Back\ \(2\).jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the image covers the whole page */
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.header {
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 4rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: float 4s ease-in-out infinite;
+}
+
+.header p { 
+    font-size: 1.4rem; /* Slightly larger text for better visibility */
+    color: #fff;
+    background: linear-gradient(135deg, #03dac6, #00ff88); /* Futuristic gradient background */
+    padding: 12px 25px; /* Adjusted padding for better balance */
+    border-radius: 50px; /* More rounded corners for a sleek look */
+    display: inline-block;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text for a bold, modern feel */
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2); /* Glow effect around the text */
+    letter-spacing: 1.5px; /* Spaced out letters for a more dynamic effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+  }
+
+  .header p:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    background: linear-gradient(135deg, #00ff88, #03dac6); /* Reversed gradient on hover */
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3); /* Enhanced glow effect */
+  }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--glow);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    padding: 1rem;
+}
+
+.skill {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+    max-width: 250px; /* Limiting width for a cleaner design */
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+    height: 200px; /* Fixed height for all items */
+    width: 200px;
+}
+
+.skill p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Skill icon styling */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    padding: 1rem;
+}
+
+.skill {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+    max-width: 250px; /* Limiting width for a cleaner design */
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+}
+
+.skill p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Skill icon styling */
+.skill-icon {
+    width: 80px; /* Consistent icon size */
+    height: 80px; /* Ensure the height is the same as width */
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.skill:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Animation for scaling effect */
+.skill-icon {
+    width: 80px; /* Consistent icon size */
+    height: 80px; /* Ensures the height matches the width */
+    animation: scaleUp 3s ease-in-out infinite; /* Infinite scaling animation */
+}
+
+/* Keyframes for scaling effect */
+@keyframes scaleUp {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.2); /* Slightly grows larger */
+    }
+    100% {
+        transform: scale(1); /* Returns to original size */
+    }
+}
+
+.skill-icon:hover {
+    animation: none; /* Stops animation when hovered */
+}
+
+
+
+.project-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.work-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.work-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.work-content {
+display: flex;
+align-items: center;
+justify-content: right; /* Pushes button to the far right */
+gap: 2rem; /* Adds spacing between text and button */
+}
+
+.work-text {
+flex: 1; /* Allows text to take up available space */
+}
+
+.project-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+.contact-form button {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+    box-shadow: var(--glow);
+}
+
+@media (max-width: 768px) {
+    .header h1 { font-size: 2.5rem; }
+    .project-card { flex-direction: column; }
+}
+
+.project-content {
+display: flex;
+align-items: center;
+justify-content: right; /* Pushes button to the far right */
+gap: 2rem; /* Adds spacing between text and button */
+}
+
+.project-text {
+flex: 1; /* Allows text to take up available space */
+}
+
+.futuristic-button {
+display: inline-block;
+padding: 12px 24px;
+background: linear-gradient(45deg, #00ff88, #03dac6);
+color: #121212;
+border: none;
+border-radius: 10px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+text-decoration: none;
+text-align: center;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+.futuristic-button:hover {
+transform: scale(1.05);
+box-shadow: 0 0 25px rgba(0, 255, 136, 0.8);
+background: linear-gradient(45deg, #03dac6, #00ff88);
+}
+
+.futuristic-button:active {
+transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+.project-content {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.futuristic-button {
+    width: 100%; /* Full width on smaller screens */
+}
+}
+
+/* Navigation Bar */
+/* 🔹 General Styles */
+body {
+background-color: #0a0a0a;
+font-family: 'Orbitron', sans-serif; /* Futuristic font */
+}
+
+/* 🔹 Navigation Bar */
+.nav-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+
+background: rgba(0, 0, 0, 0.8);
+backdrop-filter: blur(10px);
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+z-index: 1000;
+box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* 🔹 Navigation Buttons */
+.nav-button {
+color: #0ff;
+text-decoration: none;
+font-size: 18px;
+padding: 10px 15px;
+border: 2px solid transparent;
+text-transform: uppercase;
+transition: all 0.3s ease-in-out;
+position: relative;
+overflow: hidden;
+}
+
+/* 🔹 Neon Glow Effect */
+.nav-button:hover {
+border: 2px solid #0ff;
+box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+color: #fff;
+}
+
+/* 🔹 Animated Hover Line */
+.nav-button::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 3px;
+bottom: 0;
+left: -100%;
+background: #0ff;
+transition: 0.3s ease-in-out;
+}
+
+.nav-button:hover::after {
+left: 0;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+.nav-container {
+flex-direction: column;
+text-align: center;
+}
+.nav-button {
+display: block;
+padding: 12px;
+}
+}
+
+/* 🔹 Make the Section Bigger & Stylish */
+.connect-section {
+padding: 100px px; /* Increase padding for a larger section */
+text-align: center;
+border-radius: 15px;
+max-width: 900px;
+margin: 40px auto;
+}
+
+/* 🔹 Section Title */
+.connect-section h2 {
+font-size: 36px;
+text-transform: uppercase;
+color: linear-gradient(45deg, #03dac6, #00ff88);
+text-shadow: linear-gradient(45deg, #03dac6, #00ff88);
+letter-spacing: 2px;
+margin-bottom: 25px;
+}
+
+/* 🔹 Grid Layout for Icons */
+.connect-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 25px;
+justify-content: center;
+align-items: center;
+
+}
+
+/* 🔹 Individual Connect Items */
+.connect-item {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 15px;
+font-size: 22px;
+backdrop-filter: blur(10px);
+padding: 20px;
+border-radius: 12px;
+transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+color: white;
+font-weight: bold;
+text-transform: uppercase;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+}
+
+/* 🔹 Icon Styling */
+.connect-item i {
+font-size: 28px;
+color: #0ff;
+transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+/* 🔹 Hover Animations */
+.connect-item:hover {
+transform: scale(1.1);
+box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+}
+
+.connect-item:hover i {
+transform: rotate(10deg);
+color: white;
+}
+
+/* 🔹 Background Glow Effect */
+.connect-item::before {
+content: "";
+position: absolute;
+width: 120%;
+height: 120%;
+background: radial-gradient(circle, rgba(0, 255, 255, 0.4), transparent);
+top: -10%;
+left: -10%;
+opacity: 0;
+transition: opacity 0.3s ease-in-out;
+}
+
+.connect-item:hover::before {
+opacity: 1;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+
+}
+
+/* 🔹 Individual Image Styling */
+.header-image {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🔹 Hover Animation */
+.header-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+}
+
+/* 🔹 Responsive for Mobile */
+@media (max-width: 768px) {
+    .image-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-image {
+        width: 80%;
+    }
+}
+
+/* 🔹 Grid Layout for Info Sections */
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 10px;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
